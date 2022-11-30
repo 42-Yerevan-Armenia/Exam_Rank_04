@@ -1,7 +1,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <stdio.h>
 
 int	err(char *str, char *av)
 {
@@ -19,10 +18,7 @@ int cdir(char **av, int i)
 	if (i != 2)
 		return err("error: cd: bad arguments", NULL);
 	if (chdir(av[i]) != 0)
-	{
-		printf("[%d]\n", i);
 		return err("error: cd: cannot change directory to ", av[i] );
-	}
 	return (0);
 }
 
