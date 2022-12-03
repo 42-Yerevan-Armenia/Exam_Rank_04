@@ -24,6 +24,11 @@ microshell
 i love my microshell
 $>
 
+$>./microshell /bin/echo WOOT "; /bin/echo NOPE;" "; ;" ";" /bin/echo YEAH
+WOOT ; /bin/echo NOPE; ; ;
+YEAH
+$>
+
 Hints:
 Don't forget to pass the environment variable to execve
 
